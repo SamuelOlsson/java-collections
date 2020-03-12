@@ -6,7 +6,7 @@ public class ApplicationRunner {
 
 	public static void main(String[] args) {
 
-		ListService ls = new ListService();
+		StudentRepository studentRepo = new StudentRepository();
 		int choice = 1;
 
 		
@@ -21,10 +21,10 @@ public class ApplicationRunner {
 			if(choice == 1) {
 				System.out.println("Enter Student: ");
 				String student = in.next();
-				ls.addStudent(student);
+				studentRepo.addStudent(student);
 			}
 			else if(choice == 2) {
-				ls.printStudents();
+				studentRepo.printStudents();
 			}
 			
 			System.out.println("/n/n");
